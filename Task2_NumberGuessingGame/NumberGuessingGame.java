@@ -8,33 +8,58 @@ public class NumberGuessingGame {
         Scanner sc = new Scanner(System.in);
         Random rand = new Random();
 
-        int number = rand.nextInt(100) + 1;
-        int guess = 0;
-        int attempts = 0;
+        char playAgain;
 
-        System.out.println("=== Number Guessing Game ===");
-        System.out.println("Guess a number between 1 and 100");
+        do {
 
-        while (guess != number) {
+            System.out.println("Choose Difficulty");
+            System.out.println("1. Easy (1-50)");
+            System.out.println("2. Medium (1-100)");
+            System.out.println("3. Hard (1-500)");
 
-            System.out.print("Enter your guess: ");
-            guess = sc.nextInt();
+            int choice = sc.nextInt();
 
-            attempts++;
+            int limit;
 
-            if (guess > number) {
-                System.out.println("Too High!");
+            if(choice == 1)
+                limit = 50;
+            else if(choice == 2)
+                limit = 100;
+            else
+                limit = 500;
+
+            int number = rand.nextInt(limit) + 1;
+
+            int score = 100;
+            int attempts = 0;
+
+            while(attempts < 10) {
+
+                System.out.print("Enter Guess: ");
+                int guess = sc.nextInt();
+
+                attempts++;
+
+                if(guess == number) {
+                    System.out.println("Correct!");
+                    System.out.println("Attempts: " + attempts);
+                    System.out.println("Score: " + score);
+                    break;
+                }
+
+                if(guess > number)
+                    System.out.println("Too High");
+                else
+                    System.out.println("Too Low");
+
+                score -= 10;
             }
-            else if (guess < number) {
-                System.out.println("Too Low!");
-            }
-            else {
-                System.out.println("Correct!");
-                System.out.println("Attempts: " + attempts);
-            }
-        }
+
+            System.out.println("Play Again? (Y/N)");
+            playAgain = sc.next().charAt(0);
+
+        } while(playAgain == 'Y' || playAgain == 'y');
 
         sc.close();
     }
 }
-
