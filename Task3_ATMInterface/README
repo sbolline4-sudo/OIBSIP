@@ -1,0 +1,18 @@
+ATM Interface
+
+Objective:
+
+To simulate ATM operations using Java.
+
+Features:
+- Login
+- Deposit
+- Withdraw
+- Transfer
+- Transaction History
+
+Technology:
+- Java
+
+Created By:
+Sai Varun Bollineni
