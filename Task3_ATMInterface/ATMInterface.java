@@ -35,7 +35,8 @@ public class ATMInterface {
             System.out.println("3. Deposit");
             System.out.println("4. Transfer");
             System.out.println("5. Check Balance");
-            System.out.println("6. Quit");
+            System.out.println("6. Change PIN");
+            System.out.println("7. Quit");
 
             System.out.print("Enter Choice: ");
             choice = sc.nextInt();
@@ -61,8 +62,15 @@ public class ATMInterface {
                 case 5:
                     System.out.println("Current Balance: ₹" + balance);
                     break;
-
+                
                 case 6:
+                    System.out.print("Enter New PIN: ");
+                    pin = sc.next();
+
+                    System.out.println("PIN Changed Successfully");
+                    break;
+
+                case 7:
                     System.out.println("Thank You!");
                     break;
 
@@ -70,7 +78,7 @@ public class ATMInterface {
                     System.out.println("Invalid Choice");
             }
 
-        } while (choice != 6);
+        } while (choice != 7);
 
         sc.close();
     }
