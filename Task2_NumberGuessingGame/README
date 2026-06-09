@@ -1,0 +1,22 @@
+Number Guessing Game
+
+Objective:
+create a fun and interactive game where the computer generates a random number and the user attempts to guess it.
+
+Features:
+* Random Number Generation
+* User Input Validation
+* Higher/Lower Hints
+* Attempt Counter
+* Interactive Gameplay
+
+Technologies Used:
+* Java
+
+Game Rules:
+* The computer generates a number between 1 and 100.
+* The user keeps guessing until the correct number is found.
+* Hints are provided after every guess.
+
+Created By:
+Sai Varun Bollineni
