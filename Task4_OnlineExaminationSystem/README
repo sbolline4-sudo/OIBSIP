@@ -1,0 +1,21 @@
+Online Examination System
+
+Objective:
+create a simple online examination system
+
+Features:
+* User Login Authentication
+* Password Update
+* Multiple Choice Questions (MCQs)
+* Automatic Score Calculation
+* Exam Submission
+* Logout Functionality
+
+Technologies Used:
+* Java
+* Scanner Class
+* Methods and Functions
+* Conditional Statements
+
+Created By:
+Sai Varun Bollineni
